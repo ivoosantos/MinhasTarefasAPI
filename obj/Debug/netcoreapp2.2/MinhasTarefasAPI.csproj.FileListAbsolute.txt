@@ -11,3 +11,6 @@ C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.RazorAssembl
 C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.AssemblyInfoInputs.cache
 C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.AssemblyInfo.cs
 C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.RazorTargetAssemblyInfo.cache
+C:\GitApi\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.pdb
+C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.dll
+C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.pdb
