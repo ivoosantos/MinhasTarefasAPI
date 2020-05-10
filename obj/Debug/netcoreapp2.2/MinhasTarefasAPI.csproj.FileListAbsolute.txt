@@ -1,0 +1,13 @@
+C:\GitApi\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\GitApi\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\appsettings.json
+C:\GitApi\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\GitApi\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.deps.json
+C:\GitApi\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.runtimeconfig.json
+C:\GitApi\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.runtimeconfig.dev.json
+C:\GitApi\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.dll
+C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.csprojAssemblyReference.cache
+C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.RazorAssemblyInfo.cache
+C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.RazorAssemblyInfo.cs
+C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.AssemblyInfoInputs.cache
+C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.AssemblyInfo.cs
+C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.RazorTargetAssemblyInfo.cache
