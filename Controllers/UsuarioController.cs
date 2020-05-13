@@ -24,6 +24,8 @@ namespace MinhasTarefasAPI.Controllers
             _signInManager = signInManager;
             _userManager = userManager;
         }
+
+        [HttpPost("login")]
         public ActionResult Login([FromBody]UsuarioDTO usuarioDTO)
         {
             ModelState.Remove("Nome");
@@ -51,13 +53,16 @@ namespace MinhasTarefasAPI.Controllers
             }
         }
 
+        [HttpPost("")]
         public ActionResult Cadastrar([FromBody]UsuarioDTO usuarioDTO)
         {
             if (ModelState.IsValid)
             {
                 ApplicationUser usuario = new ApplicationUser();
                 usuario.FullName = usuarioDTO.Nome;
+                usuario.UserName = usuarioDTO.Email;
                 usuario.Email = usuarioDTO.Email;
+
                 var resultado = _userManager.CreateAsync(usuario, usuarioDTO.Senha).Result;
 
                 if (!resultado.Succeeded)
