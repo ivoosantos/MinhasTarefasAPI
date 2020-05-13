@@ -13,7 +13,7 @@ namespace MinhasTarefasAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsuarioController : Controller
+    public class UsuarioController : ControllerBase
     {
         private IUsuarioRepository _usuarioRepository;
         private readonly SignInManager<ApplicationUser> _signInManager;
