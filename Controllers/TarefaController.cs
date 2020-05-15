@@ -29,6 +29,12 @@ namespace MinhasTarefasAPI.Controllers
             return Ok(_tarefaRepository.Sincronizacao(tarefas));
         }
 
+        [HttpGet("modelo")]
+        public ActionResult Modelo()//Retorna o modelo dos dados...
+        {
+            return Ok(new Tarefa());
+        }
+
         [Authorize]
         [HttpGet("restaurar")]
         public ActionResult Restaurar(DateTime data)
