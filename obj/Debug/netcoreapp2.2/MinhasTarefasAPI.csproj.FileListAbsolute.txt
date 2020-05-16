@@ -14,3 +14,4 @@ C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.RazorTargetA
 C:\GitApi\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.pdb
 C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.dll
 C:\GitApi\MinhasTarefasAPI\obj\Debug\netcoreapp2.2\MinhasTarefasAPI.pdb
+C:\GitApi\MinhasTarefasAPI\bin\Debug\netcoreapp2.2\MinhasTarefasAPI.xml

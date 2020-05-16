@@ -16,6 +16,7 @@ namespace MinhasTarefasAPI.V1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class UsuarioController : ControllerBase
     {
         private IUsuarioRepository _usuarioRepository;
@@ -109,7 +110,7 @@ namespace MinhasTarefasAPI.V1.Controllers
             }
         }
 
-        public TokenDTO BuildToken(ApplicationUser usuario)
+        private TokenDTO BuildToken(ApplicationUser usuario)
         {
             var claims = new[]
             {

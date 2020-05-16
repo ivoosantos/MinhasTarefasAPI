@@ -24,6 +24,7 @@ using MinhasTarefasAPI.V1.Helpers.Swagger;
 using MinhasTarefasAPI.V1.Models;
 using MinhasTarefasAPI.V1.Repositories;
 using MinhasTarefasAPI.V1.Repositories.Contracts;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace MinhasTarefasAPI
 {
@@ -67,9 +68,24 @@ namespace MinhasTarefasAPI
                 cfg.AssumeDefaultVersionWhenUnspecified = true;
                 cfg.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
             });
-
+            //Swagger é uma biblioteca para versionamento
             services.AddSwaggerGen(cfg =>
             {
+                //Aqui ele faz com que no site swagger dê a opção de colocar o token para o usuário ser autenticado.
+                cfg.AddSecurityDefinition("Bearer", new ApiKeyScheme()
+                {
+                    In = "header",
+                    Type = "apiKey",
+                    Description = "Adicione o JSON web Token(JWT) para autenticar.",
+                    Name = "Authorization"
+                });
+                //Cria um dicionário para configurar o cabeçalho da rquisição.
+                var security = new Dictionary<string, IEnumerable<string>>()
+                {
+                    {"Bearer", new string[]{ } }
+                };
+                cfg.AddSecurityRequirement(security);
+
                 cfg.ResolveConflictingActions(apiDescription => apiDescription.First());
                 cfg.SwaggerDoc("v1.0", new Swashbuckle.AspNetCore.Swagger.Info()
                 {
@@ -155,11 +171,16 @@ namespace MinhasTarefasAPI
                 app.UseHsts();
             }
 
-            app.UseAuthentication();
             app.UseStatusCodePages();
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(cfg => {
+                cfg.SwaggerEndpoint("/swagger/v1.0/swagger.json", "MinhasTarefasAPI Api v1.0");
+                cfg.RoutePrefix = String.Empty;
+            });
         }
     }
 }
