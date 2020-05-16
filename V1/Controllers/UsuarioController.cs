@@ -9,10 +9,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using MinhasTarefasAPI.Models;
-using MinhasTarefasAPI.Repositories.Contracts;
+using MinhasTarefasAPI.V1.Models;
+using MinhasTarefasAPI.V1.Repositories.Contracts;
 
-namespace MinhasTarefasAPI.Controllers
+namespace MinhasTarefasAPI.V1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
