@@ -52,7 +52,7 @@ namespace MinhasTarefasAPI.Repositories
 
         public ApplicationUser Obter(string id)
         {
-            return _userManager.FindByEmailAsync(id).Result;
+            return _userManager.FindByIdAsync(id).Result;
         }
     }
 }
