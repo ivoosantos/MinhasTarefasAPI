@@ -40,7 +40,7 @@ namespace MinhasTarefasAPI.Controllers
                 if(usuario != null)
                 {
                     //Login no Identity
-                    _signInManager.SignInAsync(usuario, false);
+                    //_signInManager.SignInAsync(usuario, false);
 
                     //retorna o Token (JWT)
                     return Ok(BuildToken(usuario));
@@ -89,16 +89,29 @@ namespace MinhasTarefasAPI.Controllers
             }
         }
 
-        public string BuildToken(ApplicationUser usuario)
+        public object BuildToken(ApplicationUser usuario)
         {
-            var clams = new[]
+            var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Email, usuario.Email)
+                new Claim(JwtRegisteredClaimNames.Email, usuario.Email),
+                new Claim(JwtRegisteredClaimNames.Sub, usuario.Id)
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("chave-api-jwt-minhas-tarefas")); //Recomendado -> appsettings.json
+            var sign = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            var exp = DateTime.UtcNow.AddHours(1);
 
+            JwtSecurityToken token = new JwtSecurityToken(
+                issuer: null,
+                audience: null,
+                claims: claims,
+                expires: exp,
+                signingCredentials: sign
+            );
 
+            var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+
+            return new { token = tokenString, expiration = exp };
         }
     }
 }
